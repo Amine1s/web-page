@@ -1,0 +1,65 @@
+@reference "../index.css";
+
+.slider-container {
+  @apply relative max-w-2xl w-full mx-auto;
+}
+
+.slider-watermark {
+  @apply absolute -top-10 -left-10 text-brand-500/10 opacity-60 pointer-events-none select-none;
+}
+
+.slider-card {
+  @apply relative bg-[#131313] backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-2xl border border-white/10 overflow-hidden text-center text-[#F5F5F0];
+}
+
+.slider-navigation {
+  @apply absolute inset-y-0 inset-x-2 flex justify-between items-center pointer-events-none z-10;
+}
+
+.slider-nav-btn {
+  @apply w-10 h-10 rounded-full bg-black/50 hover:bg-black text-[#F5F5F0] border border-white/10 shadow-md flex items-center justify-center p-0 cursor-pointer pointer-events-auto hover:scale-105 transition-all outline-none;
+}
+
+.slider-review-block {
+  @apply flex flex-col items-center;
+}
+
+.slider-avatar-wrap {
+  @apply w-16 h-16 rounded-full overflow-hidden ring-4 ring-brand-500/20 shadow-md mb-4 bg-zinc-900 border border-white/10;
+}
+
+.slider-stars-container {
+  @apply flex gap-1 justify-center mb-1.5 bg-[#181818] border border-white/5 py-1 px-3.5 rounded-full;
+}
+
+.slider-author-name {
+  @apply text-white font-bold text-sm tracking-wide;
+}
+
+.slider-meta-row {
+  @apply flex items-center gap-1.5 justify-center text-[10px] text-white/40 font-medium;
+}
+
+.slider-tag-highlight {
+  @apply text-[#f59e0b] font-bold uppercase tracking-wider text-[9px];
+}
+
+.slider-quote-text {
+  @apply mt-5 text-white/80 text-sm md:text-base leading-relaxed italic max-w-lg mx-auto font-light;
+}
+
+.slider-indicators {
+  @apply flex gap-1.5 justify-center mt-6;
+}
+
+.slider-dot {
+  @apply h-2 rounded-full cursor-pointer transition-all duration-300 outline-none;
+}
+
+.slider-dot-active {
+  @apply w-6 bg-brand-500;
+}
+
+.slider-dot-inactive {
+  @apply w-2 bg-white/10;
+}

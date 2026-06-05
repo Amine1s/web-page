@@ -1,0 +1,156 @@
+@reference "../index.css";
+
+.menu-search-container {
+  @apply w-full max-w-4xl mx-auto mb-10 flex flex-col gap-4 px-4;
+}
+
+@media (min-width: 768px) {
+  .menu-search-container {
+    @apply flex-row;
+  }
+}
+
+.menu-search-input {
+  @apply w-full pl-12 pr-4 py-3.5 bg-[#131313] border border-white/10 rounded-2xl text-sm placeholder:text-white/45 text-white shadow-lg outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all font-sans;
+}
+
+.menu-veg-toggle {
+  @apply px-5 py-3.5 rounded-2xl border text-sm font-bold transition-all duration-200 cursor-pointer flex items-center justify-center gap-2;
+}
+
+.menu-veg-toggle-active {
+  @apply bg-brand-500 border-brand-500 text-black shadow-md scale-102;
+}
+
+.menu-veg-toggle-inactive {
+  @apply bg-[#131313] border-white/10 text-white hover:bg-[#1c1c1c] hover:text-[#F5F5F0];
+}
+
+.menu-tabs-bar {
+  @apply w-full overflow-x-auto pb-4 mb-10 px-4 scrollbar-none flex justify-center;
+}
+
+.menu-tabs-inner {
+  @apply flex gap-2.5 mx-auto min-w-max px-2;
+}
+
+.menu-tab-btn {
+  @apply py-3 px-5 rounded-full text-xs font-bold cursor-pointer transition-all duration-300 flex items-center gap-2 select-none border whitespace-nowrap;
+}
+
+.menu-tab-btn-active {
+  @apply bg-brand-500 border-brand-500 text-black shadow-lg scale-102 font-black tracking-wide;
+}
+
+.menu-tab-btn-inactive {
+  @apply bg-[#131313] border-white/10 text-white/70 hover:bg-[#1c1c1c] hover:text-white;
+}
+
+.menu-empty-viewport {
+  @apply text-center py-12 px-8 border border-dashed border-white/10 rounded-3xl max-w-md bg-[#131313] text-[#F5F5F0] shadow-2xl mx-auto;
+}
+
+.menu-items-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-4;
+}
+
+.menu-item-card {
+  @apply bg-[#131313] rounded-2xl overflow-hidden border border-white/10 shadow-lg hover:shadow-2xl hover:border-brand-500/30 transition-all duration-350 flex flex-col h-full relative;
+}
+
+.item-badge-chef {
+  @apply bg-amber-500/90 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1 backdrop-blur-xs;
+}
+
+.item-badge-popular {
+  @apply bg-brand-600/95 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1 backdrop-blur-xs;
+}
+
+.item-image-wrapper {
+  @apply w-full aspect-[4/3] bg-[#181818] overflow-hidden relative cursor-pointer;
+}
+
+.item-image-overlay {
+  @apply absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4 pb-3;
+}
+
+.item-details-box {
+  @apply p-5 flex flex-col justify-between flex-1;
+}
+
+.item-title {
+  @apply font-serif text-base font-bold text-white group-hover:text-brand-500 transition cursor-pointer;
+}
+
+.item-price-tag {
+  @apply font-mono text-xs font-bold text-brand-500 bg-black border border-white/5 px-2 py-0.5 rounded-lg shrink-0;
+}
+
+.item-pill-time {
+  @apply text-[10px] text-white/50 bg-[#0A0A0A] border border-white/5 py-0.5 px-2 rounded-md flex items-center gap-1;
+}
+
+.item-pill-veg {
+  @apply text-[10px] text-emerald-400 bg-emerald-950/40 border border-emerald-950/30 py-0.5 px-2 rounded-md font-semibold;
+}
+
+.item-pill-nuts {
+  @apply text-[10px] text-brand-500 bg-brand-500/10 border border-brand-500/20 py-0.5 px-2 rounded-md flex items-center gap-1 font-semibold;
+}
+
+.item-action-row {
+  @apply mt-5 pt-3 border-t border-white/10 flex items-center gap-1;
+}
+
+.item-select-btn {
+  @apply flex-1 bg-white/5 hover:bg-brand-500 hover:text-black border border-white/10 text-white font-sans text-xs font-bold py-2.5 px-4 rounded-xl transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5;
+}
+
+.item-inspect-btn {
+  @apply bg-white/5 hover:bg-[#202020] text-white/80 p-2.5 rounded-xl border border-white/10 transition cursor-pointer;
+}
+
+/* Modal styles */
+.menu-modal-overlay {
+  @apply fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-md;
+}
+
+.menu-modal-box {
+  @apply bg-[#0f0f0f] rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-white/15 flex flex-col max-h-[90vh] text-[#F5F5F0];
+}
+
+.modal-image-wrapper {
+  @apply w-full aspect-video bg-[#181818] relative shrink-0;
+}
+
+.modal-info-panel {
+  @apply p-6 flex flex-col justify-between flex-1 overflow-y-auto;
+}
+
+@media (min-width: 768px) {
+  .menu-modal-box {
+    @apply flex-row;
+  }
+  .modal-image-wrapper {
+    @apply w-1/2 aspect-square;
+  }
+  .modal-info-panel {
+    @apply p-8;
+  }
+}
+
+.modal-price-badge {
+  @apply font-mono text-base font-bold text-brand-500 bg-[#0a0a0a] border border-white/5 px-3 py-1 rounded-full inline-block mb-4;
+}
+
+.modal-detail-card {
+  @apply bg-[#131313] p-2.5 rounded-xl border border-white/5;
+}
+
+.modal-primary-btn {
+  @apply flex-1 bg-brand-500 hover:bg-brand-600 font-sans text-xs font-black text-black py-3 px-5 rounded-2xl shadow-md transition cursor-pointer flex items-center justify-center gap-1.5 border border-brand-500;
+}
+
+.modal-close-btn {
+  @apply bg-white/5 hover:bg-white/10 text-white/75 border border-white/10 font-sans text-xs font-bold py-3 px-5 rounded-2xl transition cursor-pointer;
+}

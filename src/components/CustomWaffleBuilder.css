@@ -1,0 +1,161 @@
+@reference "../index.css";
+
+.waffle-root-panel {
+  @apply bg-[#131313] rounded-3xl p-6 md:p-8 shadow-2xl border border-white/10 lg:grid lg:grid-cols-12 gap-8 max-w-4xl w-full mx-auto text-[#F5F5F0];
+}
+
+.waffle-canvas-container {
+  @apply lg:col-span-5 flex flex-col items-center justify-center bg-radial from-brand-500/5 to-amber-500/5 rounded-2xl p-6 border border-white/10 min-h-[320px] relative overflow-hidden;
+}
+
+.waffle-decor-sparkles {
+  @apply absolute inset-0 z-0 pointer-events-none opacity-40;
+}
+
+.waffle-platter {
+  @apply relative w-56 h-56 flex items-center justify-center z-10;
+}
+
+.plate-base {
+  @apply absolute w-56 h-56 rounded-full bg-[#181818] border-[3px] border-white/10 shadow-lg flex items-center justify-center;
+}
+
+.plate-inner {
+  @apply w-[88%] h-[88%] rounded-full border border-white/5 shadow-inner;
+}
+
+.waffle-base {
+  @apply absolute w-40 h-40 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl shadow-md rotate-12 flex flex-col justify-between p-1.5 overflow-hidden border border-amber-600/20;
+}
+
+.waffle-grid-container {
+  @apply grid grid-cols-4 grid-rows-4 gap-1.5 w-full h-full;
+}
+
+.waffle-grid-indent {
+  @apply bg-linear-to-tl from-amber-600/30 to-amber-500/10 rounded-sm border-r border-b border-amber-600/20 shadow-inner flex items-center justify-center;
+}
+
+.waffle-inner-dip {
+  @apply w-[70%] h-[70%] bg-amber-600/20 rounded-xs;
+}
+
+.waffle-toppings-viewport {
+  @apply absolute inset-2 pointer-events-none;
+}
+
+.topping-cream-blob {
+  @apply absolute top-4 right-4 z-20 font-serif;
+}
+
+.topping-cream-swirl {
+  @apply relative w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center border-t-2 border-slate-100;
+}
+
+.topping-cream-center {
+  @apply w-8 h-8 rounded-full bg-slate-50 shadow-inner flex items-center justify-center;
+}
+
+.topping-cream-pip {
+  @apply w-4 h-4 rounded-full bg-white;
+}
+
+.topping-scoop-container {
+  @apply absolute bottom-4 left-4 z-20;
+}
+
+.topping-scoop-base {
+  @apply w-14 h-14 rounded-full bg-radial from-amber-50 to-[#fff8e7] shadow-lg border border-amber-100 flex items-center justify-center;
+}
+
+.topping-scoop-core {
+  @apply w-11 h-11 rounded-full bg-[#fefbf0] border-t border-amber-200/50;
+}
+
+.topping-scoop-seeds {
+  @apply absolute text-[8px] opacity-25;
+}
+
+.waffle-canvas-price {
+  @apply absolute bottom-4 right-4 bg-[#050505] text-brand-500 font-mono text-xs font-bold py-1.5 px-3.5 rounded-full shadow-md border border-white/10 select-none z-20 flex gap-1 items-center;
+}
+
+.waffle-controls-panel {
+  @apply lg:col-span-7 flex flex-col justify-between mt-6 lg:mt-0;
+}
+
+.waffle-option-label {
+  @apply text-xs font-bold text-white/40 tracking-widest uppercase italic;
+}
+
+.waffle-option-section {
+  @apply mb-4;
+}
+
+.sauce-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2;
+}
+
+.sauce-btn {
+  @apply py-2 px-3 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-200 text-left flex items-center gap-2 border bg-[#181818] text-white/80 border-white/10 hover:bg-[#202020];
+}
+
+.sauce-btn-active {
+  @apply bg-brand-500/10 text-brand-500 border-brand-500 shadow-sm;
+}
+
+.sauce-price-tag {
+  @apply text-[10px] text-white/40 font-mono;
+}
+
+.toppings-flex {
+  @apply flex flex-wrap gap-2 mt-2;
+}
+
+.topping-pill {
+  @apply py-1.5 px-3 rounded-full text-xs font-bold whitespace-nowrap cursor-pointer transition-all duration-200 flex items-center gap-1.5 border bg-[#181818] text-white/80 border-white/10 hover:bg-[#202020];
+}
+
+.topping-pill-active {
+  @apply bg-brand-500 text-black border-brand-500 shadow-md scale-102;
+}
+
+.waffle-icecream-btn {
+  @apply mt-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-200 flex items-center justify-between border bg-[#181818] text-white/80 border-white/10 hover:bg-[#202020];
+}
+
+.waffle-icecream-btn-active {
+  @apply bg-brand-500/10 text-brand-500 border-brand-500;
+}
+
+.waffle-footer {
+  @apply border-t border-white/10 pt-4 mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3;
+}
+
+.waffle-footer-summary {
+  @apply text-left;
+}
+
+.waffle-summary-title {
+  @apply text-[10px] text-white/40 font-mono uppercase tracking-widest;
+}
+
+.waffle-summary-details {
+  @apply text-xs text-white/60;
+}
+
+.waffle-action-btns {
+  @apply flex gap-2 shrink-0;
+}
+
+.waffle-trash-btn {
+  @apply bg-white/5 hover:bg-white/10 text-white/70 p-3 rounded-xl transition-all cursor-pointer flex items-center justify-center border border-white/10;
+}
+
+.waffle-cart-btn {
+  @apply font-sans text-xs font-extrabold py-3 px-5 rounded-xl transition-all duration-200 cursor-pointer flex items-center gap-2 border bg-brand-500 hover:bg-brand-600 text-black border-brand-500 hover:shadow-lg;
+}
+
+.waffle-cart-btn-added {
+  @apply bg-emerald-600 text-white border-emerald-600 cursor-default;
+}

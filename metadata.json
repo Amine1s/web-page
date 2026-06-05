@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Café Restaurant Miramar",
+  "description": "A high-end, immersive landing page for Café Restaurant Pâtisserie Miramar in Fez, Morocco, featuring an interactive menu explorer, custom interactive widgets, responsive animations, and photorealistic culinary photography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

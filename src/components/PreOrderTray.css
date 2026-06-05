@@ -1,0 +1,141 @@
+@reference "../index.css";
+
+.tray-backdrop {
+  @apply fixed inset-0 bg-slate-950 z-50 backdrop-blur-xs;
+}
+
+.tray-drawer-body {
+  @apply fixed right-0 top-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl flex flex-col justify-between;
+}
+
+.tray-header {
+  @apply p-5 border-b border-gray-100 flex items-center justify-between;
+}
+
+.tray-header-left {
+  @apply flex items-center gap-2;
+}
+
+.tray-title {
+  @apply font-serif text-lg font-bold text-gray-900;
+}
+
+.tray-subtitle {
+  @apply text-[10px] text-brand-600 font-semibold tracking-wider font-sans uppercase;
+}
+
+.tray-close-btn {
+  @apply p-1 rounded-full hover:bg-slate-100 text-gray-400 hover:text-gray-600 transition;
+}
+
+.tray-content {
+  @apply flex-1 overflow-y-auto p-5 space-y-4;
+}
+
+.tray-empty-container {
+  @apply h-full flex flex-col items-center justify-center text-center px-4;
+}
+
+.tray-empty-icon {
+  @apply w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-gray-300 mb-4 border border-dashed border-gray-200;
+}
+
+.tray-empty-title {
+  @apply font-serif text-base font-bold text-gray-700;
+}
+
+.tray-empty-desc {
+  @apply text-xs text-gray-500 mt-1 max-w-xs leading-relaxed;
+}
+
+.tray-explore-btn {
+  @apply mt-5 border border-brand-900 text-brand-900 hover:bg-brand-50 font-sans text-xs font-semibold py-2.5 px-5 rounded-xl transition cursor-pointer flex items-center gap-1.5;
+}
+
+.tray-items-list {
+  @apply space-y-3.5;
+}
+
+.tray-items-bar {
+  @apply flex items-center justify-between text-[11px] text-gray-400 font-mono uppercase;
+}
+
+.tray-clear-btn {
+  @apply text-red-500 hover:text-red-700 font-semibold flex items-center gap-1;
+}
+
+.tray-item-card {
+  @apply bg-slate-50 rounded-2xl p-4 border border-slate-100 flex flex-col justify-between;
+}
+
+.tray-card-info-top {
+  @apply flex justify-between items-start gap-2;
+}
+
+.tray-card-title {
+  @apply font-sans text-sm font-semibold text-gray-900 leading-tight;
+}
+
+.tray-card-details {
+  @apply text-[10px] text-brand-700 mt-1.5 font-medium leading-relaxed;
+}
+
+.tray-card-price {
+  @apply font-mono text-xs font-bold text-brand-900 shrink-0 bg-brand-50 px-2 py-0.5 rounded;
+}
+
+.tray-card-controls-bar {
+  @apply flex justify-between items-center mt-3.5 pt-2.5 border-t border-slate-200/50;
+}
+
+.tray-single-price-label {
+  @apply text-[10px] text-gray-400 font-mono;
+}
+
+.tray-counter-group {
+  @apply flex items-center gap-2;
+}
+
+.tray-counter-btn {
+  @apply w-7 h-7 rounded-lg bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 flex items-center justify-center font-bold text-sm;
+}
+
+.tray-counter-val {
+  @apply font-mono text-xs font-bold text-gray-800 w-4 text-center;
+}
+
+.tray-item-remove-btn {
+  @apply w-7 h-7 rounded-lg hover:bg-red-50 text-gray-400 hover:text-red-600 flex items-center justify-center ml-2 border border-slate-100;
+}
+
+.tray-footer {
+  @apply p-5 border-t border-gray-100 space-y-4;
+}
+
+.tray-total-row {
+  @apply flex items-center justify-between;
+}
+
+.tray-total-label {
+  @apply text-xs uppercase font-mono tracking-wider font-semibold text-gray-500;
+}
+
+.tray-total-price {
+  @apply font-mono text-xl font-bold text-brand-900;
+}
+
+.tray-disclaimer {
+  @apply text-[10px] text-center text-gray-400 bg-brand-50/50 border border-brand-100 rounded-xl p-3 flex gap-2;
+}
+
+.tray-disclaimer-text {
+  @apply text-left leading-relaxed;
+}
+
+.tray-checkout-btn {
+  @apply w-full py-3.5 px-4 rounded-xl font-sans text-xs font-bold text-white transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-xs bg-emerald-600 hover:bg-emerald-700 shadow-md hover:shadow-lg;
+}
+
+.tray-checkout-disabled {
+  @apply bg-gray-200 text-gray-400 cursor-not-allowed shadow-none;
+}
