@@ -393,7 +393,7 @@ export default function App() {
           {/* Tea pour card square */}
           <div className="relative group rounded-3xl overflow-hidden aspect-square bg-slate-800 border border-slate-700 select-none shadow-md">
             <img
-              src="/src/assets/images/hero_miramar_1780518006911.png"
+              src="/assets/images/hero_miramar_1780518006911.png"
               alt="Rituel du thé"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               referrerPolicy="no-referrer"
@@ -409,7 +409,7 @@ export default function App() {
           {/* Waffles close card square */}
           <div className="relative group rounded-3xl overflow-hidden aspect-square bg-slate-800 border border-slate-700 select-none shadow-md">
             <img
-              src="/src/assets/images/waffles_miramar_1780518039741.png"
+              src="/assets/images/waffles_miramar_1780518039741.png"
               alt="Dessert de luxe"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               referrerPolicy="no-referrer"
@@ -425,7 +425,7 @@ export default function App() {
           {/* Couscous clay tagine */}
           <div className="sm:col-span-2 relative group rounded-3xl overflow-hidden aspect-video bg-slate-800 border border-slate-700 select-none shadow-md">
             <img
-              src="/src/assets/images/couscous_miramar_1780518024415.png"
+              src="/assets/images/couscous_miramar_1780518024415.png"
               alt="Tagine Couscous Miramar"
               className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500"
               referrerPolicy="no-referrer"
