@@ -36,7 +36,7 @@ export default function App() {
       title: 'Art de Vivre & Traditions à Fès',
       subtitle: 'CAFÉ • PÂTISSERIE • RESTAURANT • GLACIER',
       tagline: 'Une expérience sensorielle unique combinant l’excellence des Pâtisseries fines, le croustillant de nos Pizzas artisanales et la pure tradition du Thé Fassi.',
-      bgImage: '/src/assets/images/hero_miramar_1780518006911.png',
+      bgImage: '/assets/images/hero_miramar_1780518006911.png',
       ctaText: 'Découvrir la Carte Directe',
       ctaHref: '#menu-section',
     },
@@ -44,7 +44,7 @@ export default function App() {
       title: 'L’Authentique Tajine de Couscous',
       subtitle: 'CUISINE TRADITIONNELLE MAROCAINE',
       tagline: 'Laissez-vous envoûter par des recettes séculaires préparées avec soin, à la juste cuisson et relevées d’arômes orientaux exquis.',
-      bgImage: '/src/assets/images/couscous_miramar_1780518024415.png',
+      bgImage: '/assets/images/couscous_miramar_1780518024415.png',
       ctaText: 'Nos Spécialités',
       ctaHref: '#menu-section',
     },
@@ -52,7 +52,7 @@ export default function App() {
       title: 'Plaisirs Infiniment Chocolatés',
       subtitle: 'GAUFRES & DÉLICES SUR COMMANDE',
       tagline: 'Une envie gourmande de fin d’après-midi ? Concevez votre gaufre ou déguster nos douceurs fétiches sous notre terrasse enchanteresse.',
-      bgImage: '/src/assets/images/waffles_miramar_1780518039741.png',
+      bgImage: '/assets/images/waffles_miramar_1780518039741.png',
       ctaText: 'Créer ma Gaufre',
       ctaHref: '#waffle-builder',
     }
@@ -121,8 +121,7 @@ export default function App() {
     const serviceType = formData.get('serviceType') as string;
     const notes = formData.get('notes') as string;
 
-    const bookingMessage = `*Bonjour Café Restaurant Miramar !*\n\nJe souhaite réserver une table :\n\n👤 *Nom Complet :* ${fullName}\n📞 *Téléphone :* ${phone}\n📆 *Date :* ${date}\n⏰ *Heure :* ${time}\n👥 *Nombre de personnes :* ${guests}\n✨ *Service choisi :* ${serviceType}\n${notes ? `📝 *Notes particulières :* ${notes}\n` : ''}\nMerci de me reconfirmer la disponibilité de cette réservation ! 🥂`;
-    
+    const bookingMessage = `*Bonjour Café Restaurant Miramar !*\n\nJe souhaite réserver une table :\n\n *Nom Complet :* ${fullName}\n *Téléphone :* ${phone}\n *Date :* ${date}\n *Heure :* ${time}\n *Nombre de personnes :* ${guests}\n *Service :* ${serviceType}\n *Notes :* ${notes || 'Aucune'}\n\nMerci !`;
     const encodedText = encodeURIComponent(bookingMessage);
     const whatsappUrl = `https://wa.me/?text=${encodedText}`;
     
@@ -524,7 +523,7 @@ export default function App() {
                   <div className="text-xs">
                     <h4 className="font-semibold text-white font-serif">Réservation WhatsApp</h4>
                     <p className="text-slate-450 mt-1 font-mono">Ligne directe :</p>
-                    <p className="font-bold text-brand-500 mt-0.5">06 32 51 75 71</p>
+                    <p className="font-bold text-brand-500 mt-0.5">phone</p>
                   </div>
                 </div>
               </div>
@@ -687,7 +686,7 @@ export default function App() {
                         className="sr-only peer"
                       />
                       <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block pointer-events-none">
-                        {type === 'dining' ? '🍔 Dîner' : type === 'tea-time' ? '🍵 Goûter' : '🎂 Fête'}
+                        {type === 'dining' ? ' Dîner' : type === 'tea-time' ? ' Goûter' : ' Fête'}
                       </span>
                     </label>
                   ))}

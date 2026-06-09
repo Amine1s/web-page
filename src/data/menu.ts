@@ -47,158 +47,179 @@ export const MENU_CATEGORIES: MenuCategory[] = [
 
 export const MENU_ITEMS: MenuItem[] = [
   {
-    id: 'm1',
-    name: 'Thé à la Menthe Royal en Théière',
-    category: 'moroccan',
+    id: "m1",
+    name: "Thé à la Menthe Royal en Théière",
+    category: "moroccan",
     price: 18,
-    description: 'Le thé à la menthe traditionnel marocain servi brûlant dans une théière ciselée en argent, parfumé aux feuilles de menthe fraîches de la région et légèrement sucré.',
-    image: '/src/assets/images/hero_miramar_1780518006911.png',
+    description:
+      "Le thé à la menthe traditionnel marocain servi brûlant dans une théière ciselée en argent, parfumé aux feuilles de menthe fraîches de la région et légèrement sucré.",
+    image: "/assets/images/hero_miramar_1780518006911.png",
     isPopular: true,
     isChefSpecial: true,
-    tags: ['Traditionnel', 'Best-Seller'],
-    estimatedTime: '5-7 min',
+    tags: ["Traditionnel", "Best-Seller"],
+    estimatedTime: "5-7 min",
     attributes: {
-      vegetarian: true
-    }
+      vegetarian: true,
+    },
   },
   {
-    id: 'm2',
-    name: 'Couscous Royal Fassi',
-    category: 'moroccan',
+    id: "m2",
+    name: "Couscous Royal Fassi",
+    category: "moroccan",
     price: 45,
-    description: 'Semoule de blé fine cuite à la vapeur, surmontée de légumes fondants (carottes, courgettes, potiron), de pois chiches, et de Tfaya (oignons caramélisés et raisins secs parfumés à la cannelle).',
-    image: '/src/assets/images/couscous_miramar_1780518024415.png',
+    description:
+      "Semoule de blé fine cuite à la vapeur, surmontée de légumes fondants (carottes, courgettes, potiron), de pois chiches, et de Tfaya (oignons caramélisés et raisins secs parfumés à la cannelle).",
+    image: "/assets/images/couscous_miramar_1780518024415.png",
     isPopular: true,
-    tags: ['Signé Miramar', 'Copieux'],
-    estimatedTime: '15-20 min',
-    attributes: {}
+    tags: ["Signé Miramar", "Copieux"],
+    estimatedTime: "15-20 min",
+    attributes: {},
   },
   {
-    id: 'f1',
-    name: 'Tacos Double Fromage Savoyard',
-    category: 'burgers-tacos',
+    id: "f1",
+    name: "Tacos Double Fromage Savoyard",
+    category: "burgers-tacos",
     price: 38,
-    description: 'Tacos garni d’aiguillettes de poulet croustillantes, frites dorées épaisses, sauce fromagère maison onctueuse, et une couche de fromage à raclette coulant.',
-    image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&auto=format&fit=crop',
+    description:
+      "Tacos garni d’aiguillettes de poulet croustillantes, frites dorées épaisses, sauce fromagère maison onctueuse, et une couche de fromage à raclette coulant.",
+    image:
+      "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&auto=format&fit=crop",
     isPopular: true,
-    tags: ['Gourmand', 'Fast Food'],
-    estimatedTime: '10-12 min',
-    attributes: {}
+    tags: ["Gourmand", "Fast Food"],
+    estimatedTime: "10-12 min",
+    attributes: {},
   },
   {
-    id: 'w1',
-    name: 'Gaufre Suprême Miramar',
-    category: 'breakfast-waffles',
+    id: "w1",
+    name: "Gaufre Suprême Miramar",
+    category: "breakfast-waffles",
     price: 25,
-    description: 'Gaufre bruxelloise croustillante tapissée de Nutella chaleureux, morceaux de Kinder Bueno, éclats d’Oréo, fraises fraîches découpées et une rosace de crème fouettée.',
-    image: '/src/assets/images/waffles_miramar_1780518039741.png',
+    description:
+      "Gaufre bruxelloise croustillante tapissée de Nutella chaleureux, morceaux de Kinder Bueno, éclats d’Oréo, fraises fraîches découpées et une rosace de crème fouettée.",
+    image: "/assets/images/waffles_miramar_1780518039741.png",
     isPopular: true,
     isChefSpecial: true,
-    tags: ['Sucré', 'Signature Dessert'],
-    estimatedTime: '8-10 min',
+    tags: ["Sucré", "Signature Dessert"],
+    estimatedTime: "8-10 min",
     attributes: {
       containsNuts: true,
-      vegetarian: true
-    }
+      vegetarian: true,
+    },
   },
   {
-    id: 'p1',
-    name: 'Pizza Regina au Feu d’Or',
-    category: 'pizza-pasta',
+    id: "p1",
+    name: "Pizza Regina au Feu d’Or",
+    category: "pizza-pasta",
     price: 40,
-    description: 'Pâte à pizza fine pétrie à la main, sauce tomate basilic, mozzarella fraîche filante, champignons rôtis, jambon de dinde fumé, olives noires de Fès et filet d’huile piquante.',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop',
-    tags: ['Four à Pizza'],
-    estimatedTime: '10 min',
-    attributes: {}
+    description:
+      "Pâte à pizza fine pétrie à la main, sauce tomate basilic, mozzarella fraîche filante, champignons rôtis, jambon de dinde fumé, olives noires de Fès et filet d’huile piquante.",
+    image:
+      "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop",
+    tags: ["Four à Pizza"],
+    estimatedTime: "10 min",
+    attributes: {},
   },
   {
-    id: 'p2',
-    name: 'Tagliatelles Crème de Fromages',
-    category: 'pizza-pasta',
+    id: "p2",
+    name: "Tagliatelles Crème de Fromages",
+    category: "pizza-pasta",
     price: 35,
-    description: 'Tagliatelles fraîches liées dans une sauce crémeuse au parmesan reggiano, mozzarella fondante, fromage bleu, garnies d’un jaune d’œuf et d’une tomate cerise rôtie.',
-    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&auto=format&fit=crop',
-    estimatedTime: '10-12 min',
+    description:
+      "Tagliatelles fraîches liées dans une sauce crémeuse au parmesan reggiano, mozzarella fondante, fromage bleu, garnies d’un jaune d’œuf et d’une tomate cerise rôtie.",
+    image:
+      "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&auto=format&fit=crop",
+    estimatedTime: "10-12 min",
     attributes: {
-      vegetarian: true
-    }
+      vegetarian: true,
+    },
   },
   {
-    id: 'f2',
-    name: 'Gratiné de Frites Miramar',
-    category: 'burgers-tacos',
+    id: "f2",
+    name: "Gratiné de Frites Miramar",
+    category: "burgers-tacos",
     price: 28,
-    description: 'Poêlon de frites maison croustillantes noyées sous une sauce cheddar fondue, mozzarella gratinée, dinde fumée rissolée et touches d’épices de la maison.',
-    image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=800&auto=format&fit=crop',
-    tags: ['À Partager', 'Fromage addict'],
-    estimatedTime: '8 min',
-    attributes: {}
+    description:
+      "Poêlon de frites maison croustillantes noyées sous une sauce cheddar fondue, mozzarella gratinée, dinde fumée rissolée et touches d’épices de la maison.",
+    image:
+      "https://images.unsplash.com/photo-1585109649139-366815a0d713?w=800&auto=format&fit=crop",
+    tags: ["À Partager", "Fromage addict"],
+    estimatedTime: "8 min",
+    attributes: {},
   },
   {
-    id: 'f3',
-    name: 'Aiguillettes Poulet Croustillantes',
-    category: 'burgers-tacos',
+    id: "f3",
+    name: "Aiguillettes Poulet Croustillantes",
+    category: "burgers-tacos",
     price: 32,
-    description: 'Quatre filets de poulet panés extra-crispy servis sur un lit de salade verte avec frites épaisses croustillantes, sauce salsa douce et salade de tomates hachées.',
-    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=800&auto=format&fit=crop',
-    tags: ['Enfant & Adulte'],
-    estimatedTime: '10 min',
-    attributes: {}
+    description:
+      "Quatre filets de poulet panés extra-crispy servis sur un lit de salade verte avec frites épaisses croustillantes, sauce salsa douce et salade de tomates hachées.",
+    image:
+      "https://images.unsplash.com/photo-1562967914-608f82629710?w=800&auto=format&fit=crop",
+    tags: ["Enfant & Adulte"],
+    estimatedTime: "10 min",
+    attributes: {},
   },
   {
-    id: 'b1',
-    name: 'Formule Brunch Miramar Complète',
-    category: 'breakfast-waffles',
+    id: "b1",
+    name: "Formule Brunch Miramar Complète",
+    category: "breakfast-waffles",
     price: 48,
-    description: 'Un plateau colossal comprenant : œufs au plat, pain grillé, gaufre nappée de chocolat chaud, briouates croustillantes, olives de Marrakech, dinde séchée, fromage blanc local et jus d’orange frais.',
-    image: 'https://images.unsplash.com/photo-1496042399014-dc73c4f2bde1?w=800&auto=format&fit=crop',
+    description:
+      "Un plateau colossal comprenant : œufs au plat, pain grillé, gaufre nappée de chocolat chaud, briouates croustillantes, olives de Marrakech, dinde séchée, fromage blanc local et jus d’orange frais.",
+    image:
+      "https://images.unsplash.com/photo-1496042399014-dc73c4f2bde1?w=800&auto=format&fit=crop",
     isChefSpecial: true,
-    tags: ['Petit Déjeuner', 'Royal'],
-    estimatedTime: '12-15 min',
-    attributes: {}
+    tags: ["Petit Déjeuner", "Royal"],
+    estimatedTime: "12-15 min",
+    attributes: {},
   },
   {
-    id: 'pf1',
-    name: 'Tarta Semifreddo aux Fruits Rouges',
-    category: 'pastries-desserts',
+    id: "pf1",
+    name: "Tarta Semifreddo aux Fruits Rouges",
+    category: "pastries-desserts",
     price: 22,
-    description: 'Une somptueuse pâtisserie à couches comprenant un biscuit éponge léger, une crème bavaroise vanille, une gelée de framboise et des spirales de chocolat blanc sculptées en couronne.',
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop',
+    description:
+      "Une somptueuse pâtisserie à couches comprenant un biscuit éponge léger, une crème bavaroise vanille, une gelée de framboise et des spirales de chocolat blanc sculptées en couronne.",
+    image:
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop",
     isPopular: true,
-    tags: ['Glacé', 'Pâtisserie Fleurie'],
-    estimatedTime: 'Prêt à servir',
+    tags: ["Glacé", "Pâtisserie Fleurie"],
+    estimatedTime: "Prêt à servir",
     attributes: {
-      vegetarian: true
-    }
+      vegetarian: true,
+    },
   },
   {
-    id: 'd1',
-    name: 'Panaché Royal à l’Avocat',
-    category: 'drinks',
+    id: "d1",
+    name: "Panaché Royal à l’Avocat",
+    category: "drinks",
     price: 20,
-    description: 'Cocktail de fruits pressés étagé, combinant un nectar de fraise, un coulis de mangue, et un smoothie onctueux d’avocat frais mixé au lait, surmonté de fruits frais découpés.',
-    image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&auto=format&fit=crop',
+    description:
+      "Cocktail de fruits pressés étagé, combinant un nectar de fraise, un coulis de mangue, et un smoothie onctueux d’avocat frais mixé au lait, surmonté de fruits frais découpés.",
+    image:
+      "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&auto=format&fit=crop",
     isPopular: true,
-    tags: ['Frais', 'Vitamines'],
-    estimatedTime: '5 min',
+    tags: ["Frais", "Vitamines"],
+    estimatedTime: "5 min",
     attributes: {
-      vegetarian: true
-    }
+      vegetarian: true,
+    },
   },
   {
-    id: 'd2',
-    name: 'Mojito Exotique Kiwi-Menthe',
-    category: 'drinks',
+    id: "d2",
+    name: "Mojito Exotique Kiwi-Menthe",
+    category: "drinks",
     price: 18,
-    description: 'Eau gazeuse glacée infusée de jus de citron vert pressé, menthe fraîche froissée, sucre de canne roux, morceaux de kiwi frais et glace pilée.',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&auto=format&fit=crop',
-    tags: ['Sans Alcool', 'Désaltérant'],
-    estimatedTime: '3-4 min',
+    description:
+      "Eau gazeuse glacée infusée de jus de citron vert pressé, menthe fraîche froissée, sucre de canne roux, morceaux de kiwi frais et glace pilée.",
+    image:
+      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&auto=format&fit=crop",
+    tags: ["Sans Alcool", "Désaltérant"],
+    estimatedTime: "3-4 min",
     attributes: {
-      vegetarian: true
-    }
-  }
+      vegetarian: true,
+    },
+  },
 ];
 
 export const REVIEWS: Review[] = [
