@@ -377,7 +377,7 @@ export default function App() {
           {/* Main big interior landscape */}
           <div className="sm:col-span-2 relative group rounded-3xl overflow-hidden aspect-video bg-slate-800 border border-slate-700 select-none shadow-md">
             <img
-              src="/src/assets/images/interior_miramar_1780518054860.png"
+              src="/assets/images/interior_miramar_1780518054860.png"
               alt="Salon Moderne Miramar Fès"
               className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500"
               referrerPolicy="no-referrer"
