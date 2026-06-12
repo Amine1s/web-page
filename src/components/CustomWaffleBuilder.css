@@ -12,6 +12,22 @@
   @apply absolute inset-0 z-0 pointer-events-none opacity-40;
 }
 
+.waffle-sparkle-circle {
+  @apply w-full h-full border border-dashed border-brand-500/10 rounded-full scale-110;
+  will-change: transform;
+}
+
+@keyframes waffle-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 768px) {
+  .waffle-sparkle-circle {
+    animation: waffle-spin 25s linear infinite;
+  }
+}
+
 .waffle-platter {
   @apply relative w-56 h-56 flex items-center justify-center z-10;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, ShoppingBag, Trash2, CheckCircle } from 'lucide-react';
 import { CustomWaffle } from '../types';
@@ -13,7 +13,7 @@ interface TOPPING_OPTION {
 }
 
 const AVAILABLE_TOPPINGS: TOPPING_OPTION[] = [
-  { id: 'strawberries', name: 'Fraises Fraîches', price: 4, color: '#f43f5e' , accentClass: 'bg-rose-500' },
+  { id: 'strawberries', name: 'Fraises Fraîches', price: 4, color: '#f43f5e', accentClass: 'bg-rose-500' },
   { id: 'oreos', name: 'Éclats d’Oreo', price: 3, color: '#1e293b', accentClass: 'bg-slate-800' },
   { id: 'kinder-bueno', name: 'Kinder Bueno', price: 5, color: '#78350f', accentClass: 'bg-amber-900' },
   { id: 'whipped-cream', name: 'Crème Chantilly', price: 2, color: '#f8fafc', accentClass: 'bg-slate-100' },
@@ -39,6 +39,12 @@ export default function CustomWaffleBuilder({ onAddToOrder }: CustomWaffleBuilde
     extraIceCream: false
   });
   const [added, setAdded] = useState(false);
+  const [pulse, setPulse] = useState(0);
+
+  // Trigger high-performance interactive pop animation upon menu changes instead of continuous resource-heavy loops
+  useEffect(() => {
+    setPulse(prev => prev + 1);
+  }, [waffle.sauce, waffle.toppings, waffle.extraIceCream]);
 
   const basePrice = 18; // Plain waffle price in MAD
   const saucePrice = SAUCE_OPTIONS.find(s => s.id === waffle.sauce)?.price || 0;
@@ -99,7 +105,7 @@ export default function CustomWaffleBuilder({ onAddToOrder }: CustomWaffleBuilde
         
         {/* Floating sparkles behind */}
         <div className="waffle-decor-sparkles">
-          <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="w-full h-full border border-dashed border-brand-500/10 rounded-full scale-110" />
+          <div className="waffle-sparkle-circle" />
         </div>
 
         {/* Waffle Platter Plate */}
@@ -110,11 +116,12 @@ export default function CustomWaffleBuilder({ onAddToOrder }: CustomWaffleBuilde
             <div className="plate-inner" />
           </div>
 
-          {/* Golden Baked Waffle Base */}
+          {/* Golden Baked Waffle Base - Optimized dynamic interactive Pop on change rather than resource-heavy endless loops */}
           <motion.div 
-            animate={{ scale: [0.98, 1.02, 0.98] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ scale: pulse === 0 ? 1 : (pulse % 2 === 1 ? [1, 1.04, 1] : [1, 1.0401, 1]) }}
+            transition={{ duration: 0.28, ease: "easeOut" }}
             className="waffle-base"
+            style={{ willChange: 'transform' }}
           >
             {/* Waffle Grids */}
             <div className="waffle-grid-container">
@@ -202,24 +209,72 @@ export default function CustomWaffleBuilder({ onAddToOrder }: CustomWaffleBuilde
 
               {/* Topping Elements scattered around with preset locations */}
               
-              {/* Strawberries (Red hearts as strawberries) */}
+              {/* Strawberries (Prestige Sliced Berry Wedges in CSS) */}
               <AnimatePresence>
                 {waffle.toppings.includes('strawberries') && (
                   <>
-                    <motion.div initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ scale: 0 }} className="absolute top-12 left-6 text-xl z-15">🍓</motion.div>
-                    <motion.div initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ scale: 0 }} transition={{ delay: 0.1 }} className="absolute bottom-10 right-4 text-xl z-15">🍓</motion.div>
-                    <motion.div initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ scale: 0 }} transition={{ delay: 0.25 }} className="absolute top-6 left-20 text-md z-15">🍓</motion.div>
+                    <motion.div 
+                      initial={{ y: -30, opacity: 0, rotate: -15 }} 
+                      animate={{ y: 0, opacity: 1, rotate: 12 }} 
+                      exit={{ scale: 0 }} 
+                      className="absolute top-12 left-6 w-5 h-5 bg-rose-600 rounded-br-2xl rounded-tl-xl rounded-tr-lg rounded-bl-lg shadow-md border border-rose-450 z-15 flex items-center justify-center overflow-hidden"
+                    >
+                      <div className="w-1.5 h-1.5 bg-yellow-300/60 rounded-full blur-[0.5px]" />
+                    </motion.div>
+                    <motion.div 
+                      initial={{ y: -30, opacity: 0, rotate: 30 }} 
+                      animate={{ y: 0, opacity: 1, rotate: -45 }} 
+                      exit={{ scale: 0 }} 
+                      transition={{ delay: 0.1 }} 
+                      className="absolute bottom-10 right-4 w-5 h-5 bg-rose-600 rounded-br-2xl rounded-tl-xl rounded-tr-lg rounded-bl-lg shadow-md border border-rose-450 z-15 flex items-center justify-center overflow-hidden"
+                    >
+                      <div className="w-1.5 h-1.5 bg-yellow-300/60 rounded-full blur-[0.5px]" />
+                    </motion.div>
+                    <motion.div 
+                      initial={{ y: -30, opacity: 0, rotate: -60 }} 
+                      animate={{ y: 0, opacity: 1, rotate: -15 }} 
+                      exit={{ scale: 0 }} 
+                      transition={{ delay: 0.25 }} 
+                      className="absolute top-6 left-20 w-4.5 h-4.5 bg-rose-600 rounded-br-2xl rounded-tl-xl rounded-tr-lg rounded-bl-lg shadow-md border border-rose-450 z-15 flex items-center justify-center overflow-hidden"
+                    >
+                      <div className="w-1 h-1 bg-yellow-300/40 rounded-full blur-[0.5px]" />
+                    </motion.div>
                   </>
                 )}
               </AnimatePresence>
 
-              {/* Oreos (Crushed dark wafers) */}
+              {/* Oreos (Crushed dark wafer discs) */}
               <AnimatePresence>
                 {waffle.toppings.includes('oreos') && (
                   <>
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ opacity: 0 }} className="absolute top-16 left-16 text-md z-12">🍪</motion.div>
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ opacity: 0 }} transition={{ delay: 0.15 }} className="absolute bottom-12 left-16 text-sm z-12">🍪</motion.div>
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ opacity: 0 }} transition={{ delay: 0.05 }} className="absolute bottom-4 right-12 text-md z-12">🍪</motion.div>
+                    <motion.div 
+                      initial={{ scale: 0, rotate: 12 }} 
+                      animate={{ scale: 1, rotate: 45 }} 
+                      exit={{ scale: 0 }} 
+                      className="absolute top-16 left-16 w-5 h-5 bg-neutral-900 rounded-full border border-neutral-850 shadow-md z-12 flex items-center justify-center"
+                    >
+                      <div className="w-3.5 h-3.5 bg-neutral-950 rounded-full border border-neutral-900 flex items-center justify-center">
+                        <div className="w-2 h-2 bg-neutral-800 rounded-full" />
+                      </div>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ scale: 0, rotate: -35 }} 
+                      animate={{ scale: 1, rotate: -20 }} 
+                      exit={{ scale: 0 }} 
+                      transition={{ delay: 0.15 }} 
+                      className="absolute bottom-12 left-16 w-4 h-4 bg-neutral-900 rounded-full border border-neutral-850 shadow-md z-12 flex items-center justify-center"
+                    >
+                      <div className="w-2.5 h-2.5 bg-neutral-950 rounded-full border border-neutral-900" />
+                    </motion.div>
+                    <motion.div 
+                      initial={{ scale: 0, rotate: 75 }} 
+                      animate={{ scale: 1, rotate: 110 }} 
+                      exit={{ scale: 0 }} 
+                      transition={{ delay: 0.05 }} 
+                      className="absolute bottom-4 right-12 w-4.5 h-4.5 bg-neutral-900 rounded-full border border-neutral-850 shadow-md z-12 flex items-center justify-center"
+                    >
+                      <div className="w-3 h-3 bg-neutral-950 rounded-full border border-neutral-900" />
+                    </motion.div>
                   </>
                 )}
               </AnimatePresence>
